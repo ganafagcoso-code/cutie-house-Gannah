@@ -1,0 +1,364 @@
+/* ==========================================
+   CUTIE SNACK HOUSE — Designed Stylesheet
+========================================== */
+
+/* --- Global & Body --- */
+:root {
+    --primary-pink: #f8d7da;
+    --accent-rose: #f1aeb5;
+    --deep-rose: #d63384;
+    --warm-red: #dc3545;
+    --soft-bg: #fff9fa;
+    --text-dark: #443337;
+    --text-muted: #7a6569;
+    --shadow-soft: 0 4px 12px rgba(214, 51, 132, 0.08);
+    --shadow-hover: 0 8px 20px rgba(214, 51, 132, 0.15);
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    color: var(--text-dark);
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+section {
+    padding-bottom: 2.5rem;
+}
+
+/* --- Headings --- */
+h1 {
+    text-align: center;
+    padding: 2.5rem 0 1rem;
+    color: var(--deep-rose);
+    font-weight: 700;
+    font-size: 2.25rem;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    text-align: center;
+    padding: 2rem 0 1rem;
+    color: var(--deep-rose);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+h3, h4, h5 {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background: linear-gradient(90deg, #fff1f3 0%, #ffe9ec 100%) !important;
+    box-shadow: 0 2px 10px rgba(214, 51, 132, 0.08);
+    padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.35rem;
+    color: var(--deep-rose) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-rose);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px var(--primary-pink);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    margin: 0 0.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--deep-rose);
+    color: #fff !important;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background: linear-gradient(135deg, var(--deep-rose) 0%, #e8598b 100%);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(214, 51, 132, 0.3);
+    background: linear-gradient(135deg, #c92a76 0%, #d63384 100%);
+}
+
+.btn-outline-success {
+    border-radius: 2rem;
+    border-color: var(--deep-rose);
+    color: var(--deep-rose);
+    font-weight: 500;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--deep-rose);
+    border-color: var(--deep-rose);
+}
+
+/* --- Banner / Carousel --- */
+.carousel-item img {
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin: 0 auto;
+}
+
+.carousel {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.carousel-indicators button {
+    border-radius: 50%;
+    width: 12px !important;
+    height: 12px !important;
+    border: none !important;
+    background-color: var(--accent-rose) !important;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--deep-rose) !important;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    padding: 1rem;
+}
+
+.card {
+    margin: 0 auto;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.35s ease;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--deep-rose);
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.card-body .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--warm-red);
+}
+
+.category-badge {
+    display: inline-block;
+    background-color: var(--primary-pink);
+    color: var(--deep-rose);
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* --- Testimonials --- */
+.testimonial-card {
+    background-color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    height: 100%;
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--accent-rose);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.testimonial-rating {
+    color: #ffc107;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* --- Gallery --- */
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    transition: all 0.35s ease;
+    margin-bottom: 0.5rem;
+    border: 3px solid var(--primary-pink);
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    border-color: var(--deep-rose);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* --- About Page --- */
+.about-section {
+    padding: 2rem 0;
+}
+
+.about-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+}
+
+.mission-box {
+    background: linear-gradient(135deg, #fff1f3 0%, #ffe9ec 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-soft);
+}
+
+/* --- Contact Page --- */
+.contact-card {
+    background-color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    height: 100%;
+    border-left: 4px solid var(--deep-rose);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--deep-rose);
+    margin-bottom: 1rem;
+}
+
+.form-section {
+    background: linear-gradient(135deg, #fff1f3 0%, #ffe9ec 100%);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.form-control, .form-select {
+    border-radius: var(--radius-sm);
+    border: 2px solid #f3d7dc;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--deep-rose);
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.15);
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--accent-rose);
+}
+
+/* --- Utility --- */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.bg-light.rounded-3 {
+    background: linear-gradient(135deg, #fff1f3 0%, #ffe9ec 100%) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 2px solid var(--primary-pink);
+}
